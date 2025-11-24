@@ -1,0 +1,153 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "editor.fontFamily": "'JetBrains Mono Nerd Font'",
+  "editor.fontSize": 15,
+  "editor.fontLigatures": true,
+  "git.suggestSmartCommit": false,
+  "editor.formatOnSave": true,
+  "java.references.includeDecompiledSources": false,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "java": true,
+    "go": false
+  },
+  "database-client.autoSync": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDelete": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "gopls": {
+    "build.buildFlags": ["-tags=wireinject"],
+    "env": {
+      "GOFLAGS": "-tags=wireinject"
+    }
+  },
+
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.parameterNames": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.fontSize": 12,
+  "editor.inlayHints.fontStyle": "JetBrainsMono Nerd Font Mono Italic",
+  "editor.inlayHints.padding": true,
+
+  "workbench.colorCustomizations": {
+    "editorInlayHint.background": "#00000000",
+    "editorInlayHint.foreground": "#565f89",
+    "editorInlayHint.typeForeground": "#565f89",
+    "editorInlayHint.parameterForeground": "#565f89"
+  },
+
+  "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+
+  "vim.insertModeKeyBindings": [{ "before": ["j", "k"], "after": ["<Esc>"] }],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // no hl
+    {
+      "before": ["<Esc>"],
+      "when": "editorTextFocus",
+      "commands": [":nohl"],
+      "silent": true
+    },
+
+    // Buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // Window focus (LazyVim style)
+    { "before": ["<C-h>"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["<C-j>"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["<C-k>"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["<C-l>"], "commands": ["workbench.action.focusRightGroup"] },
+
+    // Window resize (LazyVim style)
+    { "before": ["<A-h>"], "commands": ["workbench.action.decreaseViewWidth"] },
+    { "before": ["<A-l>"], "commands": ["workbench.action.increaseViewWidth"] },
+    {
+      "before": ["<A-j>"],
+      "commands": ["workbench.action.increaseViewHeight"]
+    },
+    {
+      "before": ["<A-k>"],
+      "commands": ["workbench.action.decreaseViewHeight"]
+    },
+
+    // Splits
+    { "before": ["<leader>", "v"], "commands": [":vsplit"] },
+    { "before": ["<leader>", "s"], "commands": [":split"] },
+
+    // Save / quit
+    { "before": ["<leader>", "w"], "commands": [":w"] },
+    { "before": ["<leader>", "q"], "commands": [":q"] },
+
+    // Format
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["editor.action.formatDocument"]
+    },
+
+    // Quick Open ala LazyVim
+    {
+      "before": ["<leader>", "<leader>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+
+    // Diagnostics
+    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+
+    // Code actions
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    // file explorer toggle
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.files.action.focusFilesExplorer"]
+    }
+  ],
+
+  "vim.visualModeKeyBindings": [
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+  ],
+
+  "vim.handleKeys": {
+    "<Space>": false
+  },
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.renderLineHighlight": "all",
+  "editor.cursorStyle": "block",
+  "svelte.enable-ts-plugin": true,
+  "explorer.compactFolders": false
+}
